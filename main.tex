@@ -1,0 +1,60 @@
+\documentclass[8pt,twoside]{book}
+
+\usepackage[utf8]{inputenc} 			% kodowanie 
+\usepackage[T1]{fontenc} 				% czcionka Timnes New Roman
+\usepackage{courier} 					% czcionka courier
+\usepackage{mathptmx} 					% pakiet wymagany do czcionki Times New Roman
+\usepackage{graphicx} 					% pakiet graficzny
+\usepackage{enumitem} 					% spis treści i listy
+\usepackage{indentfirst} 				% aktywne pierwsze wcięcie w akapicie (domyślnie nie jest)
+\usepackage{etoolbox} 					% pakiet umożliwiający edycję domyślnych komend
+\usepackage{color} 						% podstawowe kolory
+\usepackage{listings}  
+
+\usepackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=1cm,includefoot=false,includehead=false,footskip=1.16cm]{geometry} 	% wymiary strony
+
+\usepackage{bm}							% dla pogrubionych i pochylonych czcionek w środowisku matematycznym
+
+
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{lastpage}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{blindtext}
+\graphicspath{ {./figi/} }
+\usepackage{chngcntr}
+\counterwithin{figure}{chapter}
+\usepackage[labelfont=bf]{caption}
+\captionsetup{labelfont=bf}
+\usepackage[export]{adjustbox}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\newcommand{\faSearchPluss}{\reflectbox{\faSearchPlus}}
+\newcommand{\faSearchMinuss}{\reflectbox{\faSearchMinus}}
+\usepackage{wrapfig}
+\usepackage{tablefootnote}
+\usepackage{moreverb}
+\usepackage{caption}
+\usepackage[normalem]{ulem}
+\usepackage{booktabs}
+\usepackage{subfiles}
+
+
+\begin{document}
+    \tableofcontents
+    \addcontentsline{toc}{section}{Contents}
+    \clearpage
+
+
+    \subfile{ch1/ch1}  
+    \subfile{ch2/ch2}
+    \subfile{ch3/ch3}
+    \subfile{ch4/ch4}
+    \subfile{ch5/ch5}
+
+
+\end{document}

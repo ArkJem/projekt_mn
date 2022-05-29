@@ -1,0 +1,274 @@
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{lastpage}
+\usepackage{hyperref}
+
+\begin{document}
+
+\chapter*{PREFACE}
+\label{cha:cha_P_1}
+\addcontentsline{toc}{section}{PREFACE}
+\pagenumbering{roman}
+
+MATLAB\textsuperscript{\textregistered} is an abbreviation for MATrix LABoratory and it is ideally suited for computations involving matrices. Since all of the sciences routinely collect data in the form of (spreadsheet) matrices, MATLAB turns out to be particularly suitable for the analysis of mathematical problems in an assortment of fields. MATLAB is very easy to learn how to use and has tremendous graphical capabilities. Many schools have site licenses and student editions of the software are available at special affordable rates. MATLAB is perhaps the most commonly used mathematical software in the general scientific fields (from biology, physics, and engineering to fields like business and finance) and is used by numerous university in mathematics departments. 
+
+\subsection*{MATERIAL}
+
+\noindent The book is an undergraduate-level textbook giving a thorough introduction to the
+various aspects of numerically solving problems involving differential equations,
+both partial (PDEs) and ordinary (ODEs). It is largely self-contained with the
+prerequisite of a basic course in single-variable calculus and it covers all of the
+needed topics from numerical analysis. For the material on partial differential
+equations, apart from the basic concept of a partial derivative, only certain
+portions rely on facts from multivariable calculus and these are not essential to the
+main development with the only exception being in the final chapter on the finite
+element method. The book is made up of the following three parts:
+\\
+
+\noindent Part I: Introduction to MATLAB and Numerical Preliminaries (Chapters 1-7).
+This part introduces the reader to the MATLAB software and its graphical
+capabilities, and shows how to write programs with it. The needed numerical
+analysis preparation is also done here and there is a chapter on floating point
+arithmetic. The basic element in MATLAB is a matrix and MATLAB is very
+good at manipulating and working with them. As numerous methods for
+differential equations problems amount to a discretization into a matrix problem,
+MATLAB is an ideal tool for the subject. An extensive chapter is given on
+matrices and linear systems which integrates theory and applications with
+MATLAB's prowess.
+\\
+
+\noindent Part II: Ordinary Differential Equations (Chapters 8-10). Chapter 8 gives an
+applications-based introduction to ordinary differential equations, and
+progressively introduces a plethora of numerical methods for solving initial value
+problems involving a single first order ODE. Applications include population
+dynamics and numerous problems in physics. The various numerical methods are
+compared and error analysis is done. Chapter 9 adapts the methods of the previous
+chapter for initial value problems of higher order and systems of ODEs. Applications that are extensively investigated include predator-prey problems,
+epidemiology models, chaos, and numerous physical problems. The geometric
+theory on topics such as phase-plane analysis, stability, and the PoincaréBendixson theorem is presented and corroborated with numerical experiments.
+Chapter 10 covers two-point boundary value problems for second-order ODEs.
+The very successful (linear and nonlinear) shooting methods are presented and
+advocated as the methods of choice for such problems. The chapter also includes
+sections on finite difference methods and Rayleigh-Ritz methods. These two
+methods are the one-dimensional analogues of the main methods that will be used
+for solving boundary value problems for PDE in Part III.
+Part III: Partial Differential Equations (Chapters 11-13). After a brief section on
+the three-dimensional graphical capabilities of MATLAB, Chapter 11 introduces
+partial differential equations based on the model problem of heat flow and steadystate distribution. This model allows us to introduce many concepts of elliptic and
+parabolic PDEs. The remainder of this chapter focuses on finite difference
+methods for solving elliptic boundary value problems. Although the schemes for
+hyperbolic and parabolic problems are usually simpler to write down and use,
+elliptic problems are much more stable and so attention to stability issues can be
+deferred. All sorts of boundary conditions are considered and much theory (both
+mathematical and numerical) is presented and investigated. Chapter 12 begins
+with a discussion on hyperbolic PDE and the model wave equation. The
+remaining sections show to how use finite difference methods to solve well-posed
+problems involving both hyperbolic and parabolic PDEs. Finally, Chapter 13
+gives an introduction to the finite element method (FEM). This method is much
+more versatile in dealing with irregular-shaped domains and various boundary
+conditions than are the finite difference methods, whose use is most often
+restricted to rectangular domains. The FEM is based on breaking the domain up
+into smaller pieces that can be of any shape. We mostly use triangular elements,
+since MATLAB has some nice tools to help us effectively triangulate a domain
+once we decide on a deployment of nodes. The techniques presented in this
+chapter will enable the reader to numerically solve any elliptic boundary value
+problem of the form: 
+First example, bold, italics and underline:
+\\
+\\
+\\
+for which a solution exists. Here $\Omega$ is any domain in the plane whose boundary is
+made up of pieces determined by graphs of functions (simply or multiply
+connected), and $\Gamma$, and $\Gamma2$ partition its boundary. Existence and uniqueness
+theorems are given that help to determin when such problems are well-posed.
+This is quite a general class of problems that has numerous applications.
+
+\subsection*{INTENDED AUDIENCE AND STYLE OF THIS BOOK}
+
+\noindent The text easily includes enough material for a one-year course, but several onesemester/quarter courses can be taught out of it. One useful feature is the large
+number of exercises that span from routine computations to help solidify newly learned skills to more advanced conceptual and theoretical questions and new
+applications. Some sections are marked with an asterisk to indicate that they
+should be considered as optional; their deletion would cause no major disruption
+to the main themes of the text. Some of these optional sections are more
+theoretical than the others (e.g., Section 10.5: Rayleigh-Ritz methods), while
+others present applications in a particular related area (e.g., Section 7.2:
+Introduction to Computer Graphics). To facilitate readability of the text, we
+employ the following font conventions: Regular text is printed in the (current)
+Times New Roman font, MATLAB inputs and commands appear in {\fontfamily{pcr}\selectfont Courier New font}, whereas MATLAB output is printed in {\fontfamily{phv}\selectfont Ariel font}. Essential
+vocabulary words are set in bold type, while less essential vocabulary is set in
+\emph{italics}.
+
+Over the past six years I have been teaching numerous courses in numerical
+analysis, discrete mathematics, and mathematical modeling at the University of
+Guam. Prior to this, at the University of Hawaii, 1 had been teaching more
+theoretically based courses in an assortment of mathematical subjects. In my
+education at the University of Michigan and the University of Maryland, apart
+from being given much good solid training in both pure and applied areas of
+mathematics, I was also imparted with a tremendous appreciation for the
+interesting and rich history of mathematics. This book brings together a
+conceptual and rigorous approach to many different areas of numerical differential
+equations, along with a practical approach for making the most out of the
+MATLAB computing environment to solve problems and gain further
+understanding. It also includes numerous historical comments (and portraits) on
+key mathematicians who have made contributions to the various areas under
+investigation. It teaches how to make the most of mathematical theory and
+computational efficiency. At the University of Guam, I have been able to pick and
+choose many of the topics that I would cover in such classes. Throughout these
+courses I was using the MATLAB computing environment as an integral
+component, and most portions of the text have been classroom tested.
+
+I was motivated to write this book precisely because I could not find single books
+that were suitable to use for several courses that I was teaching. Often I would
+find that I would need to put several books on reserve at the library since no single
+textbook would cover all of the needs of these courses and it would be
+unreasonable to require the students to purchase a large number of textbooks. A
+major problem was coming up with suitable homework problems to assign that
+involved interesting applications and that forced the student to combine conceptual
+thinking along with experiments on the computer. I started off by writing out my
+own homework assignments and as these problems and my lecture notes began to
+reach a sizeable volume, I decided it was time to expand them into a book. There
+are many decent books on how to use MATLAB, there are other books on
+programming,and still others on theory and modeling with differential equations.
+There does not seem to exist, however, a comprehensive treatment of all of these
+topics in the market. This book is designed primarily to fill this important gap in
+the textbook market. It encourages students to make the most out of both the
+heavy computational machinery of MATLAB through efficiently designed
+programs and their own conceptual thinking. It emphasizes using computer
+experiments to motivate mathematical theory and discovery. Sports legend Yogi
+Berra once said, "In theory there is no difference between theory and practice. In
+practice there is." This quote arguably rings more true for differential equations
+than for any other branch of mathematics. Much can be learned about differential
+equations by doing computer experiments and this practice is continually
+encouraged and emphasized throughout the text.
+\vspace{0.5cm}
+
+There are four intended uses of this book: 
+\begin{enumerate}
+	\item A standalone textbook for courses in numerical differential equations. It could
+be used for a one-semester course allowing for a flexible coverage of topics in
+ordinary and/or partial differential equations. It could also be used for a twosemester course in numerical differential equations. The coverage of Part I topics
+could vary, of course, depending on the level of preparedness of the students.
+	\item A textbook for a course in numerical analysis. Apart from the extensive
+coverage of differential equations, the text includes designated coverage of many
+of the standard topics in numerical analysis such as rootfinding (Chapter 6),
+floating point arithmetic (Chapter 5), solving linear systems (direct and iterative
+methods), and numerical linear algebra (Chapter 7). Other numerical analysis
+topics such as interpolation, numerical differentiation, and integration are covered
+as they are needed.
+	\item An accompanying text for a more traditional course in ordinary and/or partial
+differential equations that could be used to introduce and use (as time and interest
+permits) the very important numerical tools of the subject. The ftp site for this
+book includes all of the programs (M-flles) developed in the text and they can be
+copied into the user's computers and used to obtain numerical solutions of a great
+variety of problems in differential equations. For such usage, the amount of time
+spent learning about programming these codes can be variable, depending on the
+interests and time constraints of the particular class.
+	\item A book for self study by any science student or practitioner who uses differential
+equations and would like to learn more about the subject and/or about MATLAB.
+
+\end{enumerate}
+The programs and codes in the book have all been developed to work with the
+latest versions of MATLAB (Student Versions or Professional Versions).\footnote[1]{ The codes and M-flles in this book have been tested on MATLAB versions 5, 6, and 7. The (very)
+rare instances where a version-specific issue arises are carefully explained. One added feature of later
+versions is the extended menu options that make many tasks easier than they used to be. A good
+example of this is the improvements in the MATLAB graphics window. Many features of a graph can
+be easily modified directly using (user-friendly) menu options. In older versions, such editing had to
+be done by entering the correct "handle graphics" commands into the MATLAB command window.}
+ All of the M-files developed in the text and the exercises for the reader can be
+downloaded from book's ftp site: 
+
+{\fontfamily{pcr}\selectfont ftp://ftp.wiley.com/public/sci\_tech\_med/numerical\_differential/  }
+
+\noindent Although it is essentially optional throughout the book, when convenient we
+occasionally use MATLAB's Symbolic Toolbox that comes with the Student Version (but is optional with the Professional Version). Each chapter has many
+detailed worked-out examples for all of the material that is introduced.
+Additionally, the text is punctuated with numerous "Exercises for the Reader" that
+reinforce the reader's active participation. Detailed solutions to all of these are
+given in an appendix at the back of the book.
+
+\subsection*{ACKNOWLEDGMENTS}
+
+Many individuals and groups have assisted me in various ways that have led to the
+development of this book and I would like to take this space to express my
+appreciation to some of them. I would like to thank my students who have taken
+my courses (very often as electives) and who have read through preliminary
+versions of parts of the book and offered useful feedback that has improved the
+pedagogy of this text. The people at MathWorks (the company that develops
+MATLAB), in particular, Courtney Esposito, have been very supportive in
+providing me with software and high-quality technical support, whenever I needed
+it.
+
+During my preparation of the material, I was in constant need of getting hold of
+journal articles and books in the various subject areas. Despite the limited
+collection and the budget constraints of the University of Guam library, librarian
+Moses Francisco deserves special mention. He has always been able to do an
+outstanding job in getting the materials that I needed in a timely fashion. His
+conscientiousness, efficiency, and friendly demeanor have been an enlightening
+experience and the book has benefited greatly from his assistance. I would also
+like to mention acquisitions manager Roque Iriarte, who has been very helpful in
+obtaining important new books for our collection.
+
+Feedback from reviewers of this book has been very helpful. These reviewers
+include: Chris Gardiner (Eastern Michigan University), Mark Gockenbach
+(Michigan Tech), Murli Gupta (George Washington University), Jenny Switkes
+(Cal Poly Pomona), Robin Young (University of Massachusetts), and Richard
+Zalik (Auburn University). Among these, I owe special thanks to Drs.
+Gockenbach and Zalik; each carefully read through major portions of the text
+(Gockenbach read through the entire manuscript) and have provided extensive
+suggestions, scholarly remarks, and corrections. I would like to thank Robert
+Krasny (University of Michigan) for several useful discussions on numerical linear
+algebra
+
+The historical accounts throughout the text have benefited from the extensive
+MacTutor website. The book includes several photographs of mathematicians
+who have made contributions to the areas under investigation. I thank Benoit
+Mandelbrot for permitting the inclusion of his photograph. I thank Dan May and
+MetLife archives for providing me with and allowing me to include a company
+photo of Alfred Lotka. I am very grateful to George Phillips for extending
+permission to me to include his photographs of John Crank and Phyllis Nicolson.
+Peter Lax has kindly contacted the son of Richard Courant on my behalf to obtain permission for me to include a photograph of Courant. Two very interesting air
+foil mesh graphics that appear in Chapter 13 were created by Tim Barth of
+NASA's Jet Propulsion Laboratory; I am grateful to him for allowing their
+inclusion. 
+
+I have had many wonderful teachers throughout my years and I would like to
+express my appreciation to all of them. I would like to make special mention of
+some of them. First, back in middle school, I spent a year in a parochial school
+with a teacher, Sister Jarlaeth, who had a tremendous impact in kindling my
+interest in mathematics; my experience with her led me to develop a newfound
+respect for education. Although Sister Jarlaeth has passed, her kindness and
+caring for students and the learning process will live on with me forever. It was
+her example that made me decide to become a mathematics professor as well as a
+teacher who cares. Several years later when I arrived in Ann Arbor, Michigan for
+the mathematics PhD program, I had intended to complete my PhD in an area of
+abstract algebra, an area in which I was very well prepared and interested. During
+my first year, however, I was so enormously impressed and enlightened by the
+analysis courses that I needed to take, that I soon decided to change my area of
+focus to analysis. I would particularly like to thank my analysis professors Peter
+Duren, Fred Gehring, M. S. ("Ram") Ramanujan, and the late Allen Shields. Their
+cordial, rigorous, and elegant lectures replete with many historical asides were a
+most delightful experience. 
+
+I thank my colleagues at the University of Guam for their support and
+encouragement of my teaching many MATLAB-based mathematics courses.
+Portions of this book were completed while I was spending semesters at the
+National University of Ireland and (as a visiting professor) at the University of
+Missouri at Columbia. I would like to thank my hosts and the mathematics
+departments at these institutions for their hospitality and for providing such
+stimulating atmospheres in which to work.
+
+Last, but certainly not least, I have two more individuals to thank. My mother,
+Christa Stanoyevitch, has encouraged me throughout the project and has done a
+superb job proofreading the entire book. Her extreme conscientiousness and
+ample corrections and suggestions have significantly improved the readability of
+this book. I would like to also thank my good friend Sandra Su-Chin Wu for
+assistance whenever I needed it with the many technical aspects of getting this
+book into a professional form. Near the end of this project, she provided essential
+help in getting this book into its final form. Inevitably, there will remain some
+typos and perhaps more serious mistakes. I take full responsibility for these and
+would be grateful to any readers who could direct my attention to any such
+oversights
+
+
+\end{document}
